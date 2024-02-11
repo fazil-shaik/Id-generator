@@ -8,11 +8,11 @@
   </head>
   <body>
     <div id="idCard">
-      <h1>Id card generater</h1>
+      <h1 id="heading">Id card generater</h1>
       <input type="file" id="photoUpload" accept="image/*" />
       <button id="uploadButton">Upload</button>
       <div id="preview"></div>
-
+      <div class="data">
       <label for="studentName">Student Name:</label>
       <input type="text" id="studentName" placeholder="Enter Student Name" />
 
@@ -44,7 +44,12 @@
         id="participants"
         placeholder="Number of participants"
       />
-
+      <br/>
+      <br/>
+    </div>
+      <!-- <input type="file" id="signupload" accept="image/*" />
+      <button id="signbutton">Upload</button> -->
+      <br/>
       <button onclick="generateIDCard()">generate entry pass</button>
     </div>
     <script src="main.js"></script>
