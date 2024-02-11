@@ -2,6 +2,7 @@ const photoUpload = document.getElementById("photoUpload");
 const uploadButton = document.getElementById("uploadButton");
 const preview = document.getElementById("preview");
 
+preview.style.display ="none";
 function handleFileUpload() {
   const file = photoUpload.files[0];
   if (file) {
@@ -15,8 +16,8 @@ function previewImage(file) {
     preview.style.display = "block";
     preview.innerHTML = `<img id="previewImage" src="${e.target.result}" alt="ID Photo">`;
     const img = document.getElementById("previewImage");
-    img.style.width = "80px";
-    img.style.height = "80px";
+    img.style.width = "100px";
+    img.style.height = "100px";
   };
   reader.readAsDataURL(file);
 }
@@ -24,6 +25,7 @@ function previewImage(file) {
 uploadButton.addEventListener("click", handleFileUpload);
 
 function generateIDCard() {
+  var imageSrc = document.getElementById("previewImage").src;
   var studentName = document.getElementById("studentName").value;
   var rollNum = document.getElementById("rollNum").value;
   var branch = document.getElementById("branch").value;
@@ -33,12 +35,12 @@ function generateIDCard() {
   var phno = document.getElementById("phno").value;
   var activity = document.getElementById("activity").value;
   var participants = document.getElementById("participants").value;
-
   var idCardContainer = document.getElementById("idCard");
 
   idCardContainer.innerHTML = `
     <div class="card" >
-      <img src="./vemu-logo.jpg" style=" height="50px" width="100%" >
+    <img src="images/vemu-logo.jpg" style="height: 50px; width: 100%;" />
+      <img src = "${imageSrc}" width="100px" height="100px">
       <h2>Student Pass</h2>
       <p><strong>Name:</strong> ${studentName}</p>
       <p><strong>Roll No: </strong> ${rollNum}</p>
