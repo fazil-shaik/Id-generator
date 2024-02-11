@@ -1,23 +1,33 @@
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
   text-align: center;
   padding: 20px;
+  background-color: #00172d;
+}
+
+#heading:hover{
+  cursor: pointer;
+  background-color: #2f373f;
+  transition: ease-in-out  1.5s;
+  border-radius: 20px;
 }
 
 #idCard {
-  background-color: #fff;
+  background-color: #0052a2;
   width: 400px;
+  height: 1050px;
   margin: 20px auto;
-  padding: 15px;
+  padding: 20px 200px 20px 200px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   justify-content: left;
 }
 #imagePreview {
-  width: 80;
-  height: 80px;
-  margin: 10px;
+  width: 100px;
+  height: 100px;
+  /* margin: 10px; */
 }
 
 label {
@@ -41,6 +51,30 @@ button {
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #45a049;
+button:hover{
+  background-color: rgb(14, 16, 14);
+  color: #f4f4f4;
 }
+
+.data{
+  padding: 20px 15px 20px 15px;
+  background-color: rgb(241, 129, 24);
+  color: white;
+  border-radius: 20px;
+  margin-left: 2px;
+  font-size: larger;
+  text-transform: uppercase;
+  border-radius: 20px;
+}
+input{
+  background-color: #2472bb;
+  color: #f4f4f4;
+  border-radius: 20px;
+}
+input.placeholder{
+  color: #f4f4f4;
+}
+
+/* button{
+  size: 200px;
+} */
